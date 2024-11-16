@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+    --color-white-full: #FFFFFF;
+    --color-page: #F5F5F5;
+    --color-page-text: #4E4E65;
+    --color-white: #F6F6F8;
+    --color-grey: #B2B2BF;
+    --color-accent: #57D9A6;
+    --color-secondary: #1C1C33;
+    --color-secondary-light: #23233B;
+}
+
+@mixin dekstop {
+    @media (max-width: 1440px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 1023px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 480px) {
+        @content;
+    }
+}
+
+body {
+    font-family: "Source Sans 3", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    background-color: var(--color-page);
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+button,
+a {
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 55px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 44px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 22px;
+}
+
+button {
+    font-size: 18px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.section {
+    padding-block: 144px;
+}
+
+.container {
+    max-width: 1440px;
+    padding-inline: 82px;
+    margin-inline: auto;
+}
