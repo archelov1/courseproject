@@ -29,6 +29,10 @@
     }
 }
 
+* {
+    margin: 0;
+}
+
 body {
     font-family: "Source Sans 3", sans-serif;
     font-style: normal;
@@ -90,4 +94,24 @@ p {
     max-width: 1440px;
     padding-inline: 82px;
     margin-inline: auto;
+}
+
+.promotional_offer {
+    background-color: var(--color-accent);
+    max-width: none;
+    padding-inline: 0;
+
+    @include mobile {
+        padding-inline: 8px;
+    }
+
+    &__title {
+        text-align: center;
+        color: var(--color-secondary);
+        padding-block: 8px;
+
+        @include mobile {
+            font-size: 14px;
+        }
+    }
 }
