@@ -361,8 +361,74 @@ p {
     width: 175px;
     height: 175px;
     top: 108px;
-    left: 150px;
+    left: 134px;
   }
+}
+
+.courses {
+  background-color: var(--color-secondary-light);
+}
+.courses__content {
+  margin-bottom: 80px;
+}
+.courses__title {
+  text-align: center;
+  margin-bottom: 17px;
+}
+.courses__title-underline {
+  width: 150px;
+  height: 2px;
+  background-color: var(--color-accent);
+  border: 0;
+  margin-bottom: 50px;
+  margin-inline: auto;
+}
+.courses__description {
+  max-width: 644px;
+  text-align: center;
+  margin-inline: auto;
+  margin-bottom: 46px;
+}
+.courses__button {
+  display: block;
+  margin-inline: auto;
+}
+.courses__swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--color-accent) !important;
+}
+.courses__swiper-pagination .swiper-pagination-bullet {
+  background-color: var(--color-page-text);
+  opacity: 1 !important;
+}
+.courses__slide-image {
+  width: 100%;
+  height: 197px;
+}
+.courses__slide-content {
+  position: relative;
+  top: -6px;
+  background-color: var(--color-white-full);
+  padding: 24px;
+}
+.courses__slide-title {
+  color: var(--color-secondary);
+  margin-bottom: 8px;
+}
+.courses__slide-author {
+  color: var(--color-page-text);
+  margin-bottom: 15px;
+}
+.courses__slide-price {
+  color: var(--color-secondary);
+  margin-bottom: 16px;
+}
+.courses__slide-price span {
+  color: var(--color-grey);
+}
+.courses__slide-link {
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .mobile-overlay {

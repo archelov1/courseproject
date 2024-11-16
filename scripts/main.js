@@ -1,5 +1,29 @@
-const dialog = document.getElementById('mobileOverlay');
+const dialog = document.getElementById("mobileOverlay");
 
 function closeMobileOverlay() {
-    dialog.close(); 
+  dialog.close();
 }
+
+function courses_swiper() {
+  const swiper = new Swiper(".courses__swiper", {
+    slidesPerView: 1,
+    spaceBetween: 48,
+
+    pagination: {
+      el: ".courses__swiper-pagination",
+      type: "bullets",
+    },
+
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+      },
+
+      768: {
+        slidesPerView: 2,
+      },
+    },
+  });
+}
+
+courses_swiper();

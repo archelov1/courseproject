@@ -6,6 +6,10 @@
     <title>Skillz</title>
     <link rel="stylesheet" href="styles/modern-normalize.css" />
     <link rel="stylesheet" href="styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <div class="promotional_offer">
@@ -69,7 +73,7 @@
     </header>
 
     <main class="main">
-      <div class="hero section">
+      <section class="hero section">
         <div class="hero__wrapper container">
           <div class="hero__content">
             <p class="hero__route">Featured Course</p>
@@ -87,7 +91,7 @@
           <div class="hero__image-wrapper">
             <img
               class="hero__image"
-              src="./images/hero/image1.jpg"
+              src="./images/hero/instagram.jpg"
               alt="Instagram"
               width="614"
               height="614"
@@ -104,7 +108,81 @@
             <div class="hero__rectangel-375"></div>
           </div>
         </div>
-      </div>
+      </section>
+
+      <section class="courses section" id="courses">
+        <div class="courses__wrapper container">
+          <div class="courses__content">
+            <h2 class="courses__title">Featured Courses</h2>
+            <hr class="courses__title-underline" />
+            <h4 class="courses__description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique. Duis cursus,
+              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
+              libero vitae erat.
+            </h4>
+            <button class="courses__button button button--accent" type="button">
+              View all courses
+            </button>
+          </div>
+          <div class="courses__swiper swiper">
+            <div class="courses__swiper-wrapper swiper-wrapper">
+              <div class="courses__swiper-slide swiper-slide">
+                <img
+                  class="courses__slide-image"
+                  src="./images/hero/instagram.jpg"
+                  alt="Instagram"
+                  width="393"
+                  height="197"
+                />
+                <div class="courses__slide-content">
+                  <h3 class="courses__slide-title">
+                    How to Increase Your Engagement on Instagram
+                  </h3>
+                  <p class="courses__slide-author">Katie Murphy</p>
+                  <h4 class="courses__slide-price">$ 59.99 USD</h4>
+                  <a class="courses__slide-link" href="#">Learn more</a>
+                </div>
+              </div>
+              <div class="courses__swiper-slide swiper-slide">
+                <img
+                  class="courses__slide-image"
+                  src="./images/courses/business101.jpg"
+                  alt="Business 101"
+                  width="393"
+                  height="197"
+                />
+                <div class="courses__slide-content">
+                  <h3 class="courses__slide-title">
+                    Business 101: Setting up Your Taxes
+                  </h3>
+                  <p class="courses__slide-author">Bessie Cooper</p>
+                  <h4 class="courses__slide-price"><span>$ 69.99 USD</span> $ 39.99 USD</h4>
+                  <a class="courses__slide-link" href="#">Learn more</a>
+                </div>
+              </div>
+              <div class="courses__swiper-slide swiper-slide">
+                <img
+                  class="courses__slide-image"
+                  src="./images/courses/iphone-photography.jpg"
+                  alt="Iphone photography"
+                  width="393"
+                  height="197"
+                />
+                <div class="courses__slide-content">
+                  <h3 class="courses__slide-title">
+                    iPhone Photography: Tips, Tricks and Best Practices
+                  </h3>
+                  <p class="courses__slide-author">Dianne Russell</p>
+                  <h4 class="courses__slide-price"><span>$ 69.99 USD</span> $ 39.99 USD</h4>
+                  <a class="courses__slide-link" href="#">Learn more</a>
+                </div>
+              </div>
+            </div>
+            <div class="courses__swiper-pagination swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer></footer>
@@ -168,6 +246,8 @@
         </ul>
       </div>
     </dialog>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./scripts/main.js"></script>
   </body>
 </html>
