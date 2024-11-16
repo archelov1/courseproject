@@ -8,11 +8,124 @@
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
-    <div class="promotional_offer container">
-      <p class="promotional_offer__title">One week only—50% off all courses with code 50OFF at checkout</p>
+    <div class="promotional_offer">
+      <p class="promotional_offer__title">
+        One week only—50% off all courses with code 50OFF at checkout
+      </p>
     </div>
-    <header></header>
+
+    <header class="header">
+      <div class="header__wrapper container">
+        <a class="header__logo-link" href="./index.html">
+          <svg class="header__logo" width="135" height="44" fill="currentColor">
+            <use href="./images/svg/icons.svg#icon-Logo" />
+          </svg>
+        </a>
+        <nav class="header__list-wrapper hidden-mobile">
+          <ul class="header__list">
+            <li class="header__item">
+              <a class="header__link" href="#courses">Courses</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#workshop">Free Workshop</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#blog">Blog</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#about">About</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <a class="header__basket-link" href="#">
+          <svg
+            class="header__basket"
+            width="32"
+            height="32"
+            fill="currentColor"
+          >
+            <use href="./images/svg/icons.svg#icon-basket" />
+          </svg>
+        </a>
+        <button
+          type="button"
+          class="header__menu visible-mobile"
+          onclick="mobileOverlay.showModal()"
+        >
+          <svg
+            class="header__menu-icon"
+            width="48"
+            height="48"
+            fill="currentColor"
+          >
+            <use href="./images/svg/icons.svg#icon-menu" />
+          </svg>
+          <span class="visually-hidden">Open navigator menu</span>
+        </button>
+      </div>
+    </header>
+
     <main></main>
+
     <footer></footer>
+
+    <dialog class="mobile-overlay visible-mobile" id="mobileOverlay">
+      <form class="mobile-overlay__form" method="dialog">
+        <button class="mobile-overlay__button-close" type="submit">
+          <svg class="mobile-overlay__icon-close" width="48" height="48" fill="currentColor">
+            <use href="./images/svg/icons.svg#icon-close" />
+          </svg>
+          <span class="visually-hidden">Close navigation menu</span>
+        </button>
+      </form>
+      <div class="mobile-overlay__body">
+        <ul class="mobile-overlay__list">
+          <li class="mobile-overlay__item">
+            <a
+              class="mobile-overlay__link"
+              href="#courses"
+              onclick="closeMobileOverlay()"
+              >Courses</a
+            >
+          </li>
+          <li class="mobile-overlay__item">
+            <a
+              class="mobile-overlay__link"
+              href="#workshop"
+              onclick="closeMobileOverlay()"
+              >Free Workshop</a
+            >
+          </li>
+          <li class="mobile-overlay__item">
+            <a
+              class="mobile-overlay__link"
+              href="#blog"
+              onclick="closeMobileOverlay()"
+              >Blog</a
+            >
+          </li>
+          <li class="mobile-overlay__item">
+            <a
+              class="mobile-overlay__link"
+              href="#about"
+              onclick="closeMobileOverlay()"
+              >About</a
+            >
+          </li>
+          <li class="mobile-overlay__item">
+            <a
+              class="mobile-overlay__link"
+              href="#contact"
+              onclick="closeMobileOverlay()"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </dialog>
+    <script src="./scripts/main.js"></script>
   </body>
 </html>

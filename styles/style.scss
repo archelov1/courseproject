@@ -24,7 +24,13 @@
 }
 
 @mixin mobile {
-    @media (max-width: 480px) {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin mobile-above {
+    @media (min-width: 768px) {
         @content;
     }
 }
@@ -54,6 +60,7 @@ a {
 
 ul {
     list-style-type: none;
+    padding: 0;
 }
 
 a {
@@ -94,12 +101,43 @@ p {
     max-width: 1440px;
     padding-inline: 82px;
     margin-inline: auto;
+
+    @include tablet {
+        padding-inline: 41px;
+    }
+
+    @include mobile {
+        padding-inline: 20px;
+    }
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+}
+
+.hidden-mobile {
+    @include mobile {
+        display: none !important;
+    }
+}
+
+.visible-mobile {
+    @include mobile-above {
+        display: none !important;
+    }
 }
 
 .promotional_offer {
     background-color: var(--color-accent);
-    max-width: none;
-    padding-inline: 0;
 
     @include mobile {
         padding-inline: 8px;
@@ -113,5 +151,110 @@ p {
         @include mobile {
             font-size: 14px;
         }
+    }
+}
+
+.header {
+    background-color: var(--color-secondary);
+    padding-block: 25px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 36px;
+    }
+
+    &__link {
+        color: var(--color-white);
+        font-size: 17px;
+        transition: color 250ms ease-in-out;
+
+        &:hover {
+            color: var(--color-accent);
+        }
+    }
+
+    &__basket {
+
+        &-link {
+            position: relative;
+
+            &::after {
+                content: '0';
+                position: absolute;
+                top: -4px;
+                right: -5px;
+
+                width: 18px;
+                height: 18px;
+                text-align: center;
+                background-color: #FC5468;
+                color: var(--color-white-full);
+                font-size: 11px;
+                border-radius: 50%;
+                padding-top: 3.5px;
+            }
+        }
+    }
+
+    &__menu {
+        background-color: transparent;
+        border: none;
+
+        &-icon {
+            color: var(--color-white-full);
+        }
+    }
+}
+
+
+.mobile-overlay {
+    width: 100%;
+    height: 100%;
+    border: none;
+    margin: 0;
+    background-color: var(--color-secondary);
+
+    &:modal {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    &__form {
+        display: flex;
+        justify-content: end;
+    }
+
+    &__button-close {
+        background-color: transparent;
+        border: none;
+    }
+
+    &__icon-close {
+        color: var(--color-accent);
+    }
+
+    &__body {
+        height: 90%;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+    }
+
+    &__link {
+        font-size: 36px;
+        color: var(--color-accent);
     }
 }
