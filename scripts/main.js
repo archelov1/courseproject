@@ -48,5 +48,19 @@ function workshop_swiper() {
   });
 }
 
+function score_swiper() {
+  const swiper = new Swiper(".score__swiper", {
+    slidesPerView: 1,
+    spaceBetween: 48,
+
+    pagination: {
+      el: ".score__swiper-pagination",
+      type: "bullets",
+    },
+
+  });
+}
+
 courses_swiper();
 workshop_swiper();
+score_swiper();
