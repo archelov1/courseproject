@@ -435,9 +435,7 @@ p {
     }
 
     &__swiper {
-
         &-pagination {
-
             .swiper-pagination-bullet-active {
                 background-color: var(--color-accent) !important;
             }
@@ -450,7 +448,6 @@ p {
     }
 
     &__slide {
-
         &-image {
             width: 100%;
             height: 197px;
@@ -486,6 +483,81 @@ p {
             color: var(--color-accent);
             text-transform: uppercase;
             letter-spacing: 1px;
+        }
+    }
+}
+
+.recommendations {
+    padding-block: 0;
+    background-color: var(--color-secondary);
+
+    &__wrapper {
+        display: flex;
+        max-width: none;
+        padding-inline: 0;
+
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 664px;
+        object-fit: cover;
+
+        &-wrapper {
+            flex: 1 0 50%;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-inline: 48px;
+
+        @include tablet {
+            padding-right: 6px;
+            padding-left: 24px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 16px;
+        max-width: 513px;
+
+        @include mobile {
+            text-align: center;
+            max-width: none;
+        }
+
+        &-underline {
+            width: 150px;
+            height: 2px;
+            background-color: var(--color-accent);
+            border: 0;
+            margin-bottom: 50px;
+
+            @include mobile {
+                margin-inline: auto;
+            }
+        }
+    }
+
+    &__description {
+        margin-bottom: 46px;
+
+        @include mobile {
+            text-align: center;
+        }
+    }
+
+    &__button {
+        align-self: start;
+
+        @include mobile {
+            margin-inline: auto;
         }
     }
 }
