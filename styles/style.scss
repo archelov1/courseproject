@@ -73,11 +73,19 @@ a {
 h1 {
     font-size: 55px;
     font-weight: 700;
+
+    @include mobile {
+        font-size: 42px;
+    }
 }
 
 h2 {
     font-size: 44px;
     font-weight: 700;
+
+    @include mobile {
+        font-size: 36px;
+    }
 }
 
 h3 {
@@ -483,6 +491,11 @@ p {
             color: var(--color-accent);
             text-transform: uppercase;
             letter-spacing: 1px;
+            transition: color 250ms ease-in-out;
+
+            &:hover {
+                color: var(--color-secondary);
+            }
         }
     }
 }
@@ -508,6 +521,7 @@ p {
 
         &-wrapper {
             flex: 1 0 50%;
+            height: 664px;
         }
     }
 
@@ -558,6 +572,82 @@ p {
 
         @include mobile {
             margin-inline: auto;
+        }
+    }
+}
+
+.workshop {
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title {
+        color: var(--color-secondary);
+        margin-bottom: 17px;
+        text-align: center;
+
+        &-underline {
+            width: 150px;
+            height: 2px;
+            background-color: var(--color-accent);
+            border: 0;
+            margin-bottom: 50px;
+            margin-inline: auto;
+        }
+    }
+
+    &__description {
+        color: var(--color-page-text);
+        margin-bottom: 46px;
+        max-width: 644px;
+        text-align: center;
+    }
+
+    &__button {
+        margin-bottom: 80px;
+    }
+
+    &__swiper {
+        &-pagination {
+            .swiper-pagination-bullet-active {
+                background-color: var(--color-accent) !important;
+            }
+
+            .swiper-pagination-bullet {
+                background-color: var(--color-page-text);
+                opacity: 1 !important;
+            }
+        }
+    }
+
+    &__slide {
+        background-color: var(--color-white-full);
+        padding: 22px 35px 24px 24px;
+
+        &-title {
+            color: var(--color-secondary);
+            margin-bottom: 11px;
+            font-weight: 700;
+        }
+
+        &-description {
+            color: var(--color-page-text);
+            margin-bottom: 28px;
+        }
+
+        &-link {
+            color: var(--color-accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 250ms ease-in-out;
+
+            &:hover {
+                color: var(--color-secondary);
+            }
         }
     }
 }

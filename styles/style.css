@@ -49,10 +49,20 @@ h1 {
   font-size: 55px;
   font-weight: 700;
 }
+@media (max-width: 767px) {
+  h1 {
+    font-size: 42px;
+  }
+}
 
 h2 {
   font-size: 44px;
   font-weight: 700;
+}
+@media (max-width: 767px) {
+  h2 {
+    font-size: 36px;
+  }
 }
 
 h3 {
@@ -429,6 +439,10 @@ p {
   color: var(--color-accent);
   text-transform: uppercase;
   letter-spacing: 1px;
+  transition: color 250ms ease-in-out;
+}
+.courses__slide-link:hover {
+  color: var(--color-secondary);
 }
 
 .recommendations {
@@ -453,6 +467,7 @@ p {
 }
 .recommendations__image-wrapper {
   flex: 1 0 50%;
+  height: 664px;
 }
 .recommendations__content {
   display: flex;
@@ -503,6 +518,64 @@ p {
   .recommendations__button {
     margin-inline: auto;
   }
+}
+
+.workshop__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.workshop__title {
+  color: var(--color-secondary);
+  margin-bottom: 17px;
+  text-align: center;
+}
+.workshop__title-underline {
+  width: 150px;
+  height: 2px;
+  background-color: var(--color-accent);
+  border: 0;
+  margin-bottom: 50px;
+  margin-inline: auto;
+}
+.workshop__description {
+  color: var(--color-page-text);
+  margin-bottom: 46px;
+  max-width: 644px;
+  text-align: center;
+}
+.workshop__button {
+  margin-bottom: 80px;
+}
+.workshop__swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--color-accent) !important;
+}
+.workshop__swiper-pagination .swiper-pagination-bullet {
+  background-color: var(--color-page-text);
+  opacity: 1 !important;
+}
+.workshop__slide {
+  background-color: var(--color-white-full);
+  padding: 22px 35px 24px 24px;
+}
+.workshop__slide-title {
+  color: var(--color-secondary);
+  margin-bottom: 11px;
+  font-weight: 700;
+}
+.workshop__slide-description {
+  color: var(--color-page-text);
+  margin-bottom: 28px;
+}
+.workshop__slide-link {
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 250ms ease-in-out;
+}
+.workshop__slide-link:hover {
+  color: var(--color-secondary);
 }
 
 .mobile-overlay {
