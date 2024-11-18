@@ -757,6 +757,9 @@ p {
   }
 }
 
+.articles {
+  padding-bottom: 0px;
+}
 .articles__content {
   display: flex;
   flex-direction: column;
@@ -816,6 +819,9 @@ p {
 .future {
   padding-block: 0px;
   padding-inline: 82px;
+  position: relative;
+  top: -50%;
+  translate: 0 50%;
 }
 @media (max-width: 767px) {
   .future {
@@ -895,6 +901,97 @@ p {
   background-color: var(--color-accent);
   color: var(--color-secondary);
   border: 1px solid var(--color-page);
+}
+
+.footer {
+  background-color: var(--color-secondary);
+  padding-top: 288px;
+  z-index: -5;
+}
+.footer__logo {
+  margin-bottom: 80px;
+}
+@media (max-width: 767px) {
+  .footer__logo {
+    display: block;
+    margin-inline: auto;
+  }
+}
+.footer__content {
+  display: flex;
+  -moz-column-gap: 128px;
+       column-gap: 128px;
+}
+@media (max-width: 1023px) {
+  .footer__content {
+    -moz-column-gap: 64px;
+         column-gap: 64px;
+  }
+}
+@media (max-width: 767px) {
+  .footer__content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 64px;
+  }
+}
+.footer__socials-list {
+  display: flex;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+.footer__socials-link {
+  background-color: var(--color-white);
+  padding: 12px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 250ms ease-in-out, fill 250ms ease-in-out;
+}
+.footer__socials-link:hover {
+  background-color: var(--color-accent);
+  fill: var(--color-white);
+}
+.footer__platform-title, .footer__template-title {
+  font-weight: 400;
+}
+.footer__platform-list, .footer__template-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+}
+.footer__platform-link, .footer__template-link {
+  font-size: 18px;
+  color: var(--color-white);
+  transition: color 250ms ease-in-out;
+}
+.footer__platform-link:hover, .footer__template-link:hover {
+  color: var(--color-accent);
+}
+.footer__platform-title, .footer__template-title, .footer__socials-title {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+
+.template-info {
+  background-color: var(--color-secondary-light);
+  display: flex;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+  padding-inline: 82px;
+  padding-block: 16px;
+}
+.template-info__name {
+  font-size: 16px;
+  color: var(--color-grey);
+}
+.template-info__webflow {
+  font-size: 16px;
+  color: var(--color-grey);
 }
 
 .mobile-overlay {
