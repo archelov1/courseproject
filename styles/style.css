@@ -887,6 +887,7 @@ p {
   background-color: var(--color-secondary);
   padding-inline: 24px;
   border: 0;
+  border-radius: 4px;
   text-transform: uppercase;
   font-weight: 700;
   padding-block: 20px;
