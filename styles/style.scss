@@ -725,7 +725,7 @@ p {
 
         &-wrapper {
             position: relative;
-            
+
             @include tablet {
                 margin-inline: auto;
             }
@@ -794,7 +794,7 @@ p {
             top: 215.34px;
             left: 207px;
             border-radius: 999px 32px 999px 999px;
-            box-shadow: 14px 14px 20px 0px #1C1C3380;
+            box-shadow: 14px 14px 20px 0px #1c1c3380;
             background-color: var(--color-accent);
             z-index: -2;
 
@@ -833,7 +833,7 @@ p {
     &__description {
         margin-bottom: 46px;
     }
-    
+
     &__button {
         align-self: start;
 
@@ -844,7 +844,6 @@ p {
 }
 
 .articles {
-    
     &__content {
         display: flex;
         flex-direction: column;
@@ -914,6 +913,92 @@ p {
 
         &-author {
             color: var(--color-page-text);
+        }
+    }
+}
+
+.future {
+    padding-block: 0px;
+    padding-inline: 82px;
+
+    @include mobile {
+        padding-inline: 24px;
+    }
+
+    &__wrapper {
+        background-color: var(--color-accent);
+        padding-top: 78px;
+        padding-bottom: 94px;
+    }
+
+    &__title {
+        color: var(--color-secondary);
+        margin-bottom: 57px;
+        text-align: center;
+    }
+
+    &__form {
+        display: flex;
+        justify-content: center;
+        column-gap: 16px;
+
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+
+    &__input {
+        border: 1px solid var(--color-secondary);
+        background-color: transparent;
+        border-radius: 4px;
+        min-width: 400px;
+        font-size: 20px;
+        color: var(--color-secondary);
+        padding-left: 20px;
+        padding-block: 20px;
+        text-transform: uppercase;
+        font-weight: 700;
+        outline: none;
+        transition: border-color 250ms ease-in-out;
+
+        @include mobile {
+            min-width: 0;
+            margin-bottom: 20px;
+        }
+
+        &::placeholder {
+            color: var(--color-secondary);
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        &:hover,
+        &:focus {
+            border-color: var(--color-page);
+        }
+    }
+
+    &__submit {
+        color: var(--color-accent);
+        background-color: var(--color-secondary);
+        padding-inline: 24px;
+        border: 0;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding-block: 20px;
+        transition: 
+            color 250ms ease-in-out,
+            background-color 250ms ease-in-out,
+            border 250ms ease-in-out;
+
+        @include mobile {
+            align-self: center;
+        }
+
+        &:hover {
+            background-color: var(--color-accent);
+            color: var(--color-secondary);
+            border: 1px solid var(--color-page);
         }
     }
 }
