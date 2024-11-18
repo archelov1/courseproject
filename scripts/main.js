@@ -61,6 +61,29 @@ function score_swiper() {
   });
 }
 
+function articles_swiper() {
+  const swiper = new Swiper(".articles__swiper", {
+    slidesPerView: 1,
+    spaceBetween: 48,
+
+    pagination: {
+      el: ".articles__swiper-pagination",
+      type: "bullets",
+    },
+
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+      },
+
+      768: {
+        slidesPerView: 2,
+      },
+    },
+  });
+}
+
 courses_swiper();
 workshop_swiper();
 score_swiper();
+articles_swiper();
